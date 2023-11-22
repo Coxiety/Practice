@@ -1,0 +1,35 @@
+#include <iostream>
+
+using namespace std;
+
+int xuLy(int arr[100], int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        if (arr[i] < arr[i + 1])
+        {
+            continue;
+        }
+        else if (arr[i] > arr[i + 1])
+        {
+            continue;
+        }
+        else
+        {
+            cout << "NO";
+            return 0;
+        }
+    }
+    cout << "YES";
+}
+
+int main() {
+    int arr[100];
+    int n;
+    cin >> n;
+    for (int i = 0; i < n; ++i) {
+        cin >> arr[i];
+    }
+    xuLy(arr, n);
+    return 0;
+}
