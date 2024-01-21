@@ -1,0 +1,15 @@
+n = int(input())
+arr = []
+
+# Input for the remaining elements
+for i in range(1, n + 1):
+    x = int(input())
+    arr.append(x)
+
+def checkIfSorted(arr):
+    if arr == sorted(arr) or arr == sorted(arr, reverse=True):
+        return True
+    else:
+        return False
+
+print(checkIfSorted(arr))
